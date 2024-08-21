@@ -136,6 +136,7 @@ type apiLinter struct {
 func newAPILinter() *apiLinter {
 	return &apiLinter{
 		rules: []APIRule{
+			&rules.NamingConvention{},
 			&rules.NamesMatch{},
 			&rules.OmitEmptyMatchCase{},
 			&rules.ListTypeMissing{},
